@@ -1,10 +1,8 @@
 {
-    "hello": {
+    "infisical-cli": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "hello": {
-                "greeting": "hello"
-            }
+            "infisical-cli": {}
         }
     }
 }
