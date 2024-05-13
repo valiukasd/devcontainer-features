@@ -5,5 +5,5 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
-      time: '08:00'
-      timezone: 'Europe/Berlin'
+    reviewers:
+      - skriptfabrik/devcontainer-maintainers
