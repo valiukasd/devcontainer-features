@@ -6,4 +6,4 @@ updates:
     schedule:
       interval: 'weekly'
     reviewers:
-      - skriptfabrik/devcontainer-maintainers
+      - skriptfabrik/github-actions-maintainers
