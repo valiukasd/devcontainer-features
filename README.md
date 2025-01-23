@@ -26,7 +26,7 @@ Each Feature has its own sub-folder, containing at least a `devcontainer-feature
 │   ├── __global
 │   │   ├── all_the_clis.sh
 │   │   └── scenarios.json
-│   ├── __infisical-cli
+│   ├── infisical-cli
 │   │   ├── scenarios.json
 │   │   └── test.sh
 |   ├── ...
