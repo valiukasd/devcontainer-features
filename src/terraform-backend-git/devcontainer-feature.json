@@ -1,6 +1,6 @@
 {
     "id": "terraform-backend-git",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "name": "Terraform State management using Git",
     "documentationURL": "https://github.com/skriptfabrik/devcontainer-features/tree/main/src/terraform-backend-git",
     "description": "Installs terraform-backend-git binary.",
@@ -14,7 +14,7 @@
             "description": "Select or enter a terraform-backend-git version."
         }
     },
-    "postCreateCommand": "/usr/local/bin/terraform-backend-git &",
+    "postCreateCommand": "nohup sh -c '/usr/local/bin/terraform-backend-git &'",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
