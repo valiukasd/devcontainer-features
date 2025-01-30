@@ -52,3 +52,27 @@ DOWNLOAD_URL="https://github.com/plumber-cd/terraform-backend-git/releases/downl
 echo "Downloading terraform-backend-git from ${DOWNLOAD_URL}"
 curl -sSLo /usr/local/bin/terraform-backend-git "${DOWNLOAD_URL}"
 chmod +x /usr/local/bin/terraform-backend-git
+
+# Create start script
+cat << 'EOF' > /usr/local/bin/terraform-backend-git-start
+#!/bin/bash
+
+set -ae
+
+TF_BACKEND_GIT_ENV_PATH="${TF_BACKEND_GIT_ENV_PATH:-terraform-backend-git.env}"
+TF_BACKEND_GIT_LOG_PATH="${TF_BACKEND_GIT_LOG_PATH:-terraform-backend-git.log}"
+
+if [ -f "$TF_BACKEND_GIT_ENV_PATH" ]; then
+    echo "Sourcing $TF_BACKEND_GIT_ENV_PATH"
+    source "$TF_BACKEND_GIT_ENV_PATH"
+fi
+
+set +a
+
+echo "Stopping terraform-backend-git"
+terraform-backend-git stop || true
+
+echo "Starting terraform-backend-git in the background"
+nohup sh -c "terraform-backend-git $TF_BACKEND_GIT_ARGS &" >> "$TF_BACKEND_GIT_LOG_PATH"
+EOF
+chmod +x /usr/local/bin/terraform-backend-git-start
