@@ -1,8 +1,8 @@
 {
-    "id": "gcloud-cli",
-    "version": "1.1.1",
+    "id": "hcloud-cli",
+    "version": "1.0.0",
     "name": "Hetzner Cloud CLI",
-    "documentationURL": "https://github.com/skriptfabrik/devcontainer-features/tree/main/src/gcloud-cli",
+    "documentationURL": "https://github.com/skriptfabrik/devcontainer-features/tree/main/src/hcloud-cli",
     "description": "Installs Hetzner Cloud CLI (hcloud).",
     "options": {
         "version": {
@@ -11,7 +11,7 @@
                 "latest"
             ],
             "default": "latest",
-            "description": "Select or enter a gcloud-cli version."
+            "description": "Select or enter a hcloud-cli version."
         }
     },
     "installsAfter": [
