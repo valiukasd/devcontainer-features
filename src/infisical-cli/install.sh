@@ -40,7 +40,7 @@ fi
 
 # DEB package and download URL
 DEB_PACKAGE="infisical_${CLI_VERSION}_linux_${ARCH}.deb"
-DOWNLOAD_URL="https://dl.cloudsmith.io/public/infisical/infisical-cli/deb/any-distro/pool/any-version/main/i/in/infisical_${CLI_VERSION}/${DEB_PACKAGE}"
+DOWNLOAD_URL="https://github.com/Infisical/infisical/releases/download/infisical-cli/v${CLI_VERSION}/${DEB_PACKAGE}"
 
 # Download and install infisical-cli
 echo "Downloading infisical-cli from ${DOWNLOAD_URL}"
