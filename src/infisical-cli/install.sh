@@ -22,7 +22,7 @@ fi
 apt-get -y update
 apt-get -y install --no-install-recommends curl ca-certificates
 
-# Run setup script
+# Run Infisical setup script
 curl -1sLf 'https://artifacts-cli.infisical.com/setup.deb.sh' | bash
 apt-get -y update
 
