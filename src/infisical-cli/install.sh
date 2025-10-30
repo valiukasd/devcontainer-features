@@ -20,30 +20,19 @@ fi
 
 # Install prerequisites
 apt-get -y update
-apt-get -y install --no-install-recommends curl ca-certificates jq
+apt-get -y install --no-install-recommends curl ca-certificates
+
+# Run setup script
+curl -1sLf 'https://artifacts-cli.infisical.com/setup.deb.sh' | bash
+apt-get -y update
+
+# Install latest or selected version
+if [ "${CLI_VERSION}" = "latest" ]; then
+    apt-get -y install infisical
+else
+    apt-get -y install "infisical=${CLI_VERSION}"
+fi
 
 # Clean up
 apt-get -y clean
 rm -rf /var/lib/apt/lists/*
-
-# Fetch latest version if needed
-if [ "${CLI_VERSION}" = "latest" ]; then
-    CLI_VERSION=$(curl -s https://api.github.com/repos/infisical/infisical/releases/latest | jq -r '.tag_name' | awk '{print substr($1, 16)}')
-fi
-
-# Detect current machine architecture
-if [ "$(uname -m)" = "aarch64" ]; then
-    ARCH="arm64"
-else
-    ARCH="amd64"
-fi
-
-# DEB package and download URL
-DEB_PACKAGE="infisical_${CLI_VERSION}_linux_${ARCH}.deb"
-DOWNLOAD_URL="https://github.com/Infisical/infisical/releases/download/infisical-cli/v${CLI_VERSION}/${DEB_PACKAGE}"
-
-# Download and install infisical-cli
-echo "Downloading infisical-cli from ${DOWNLOAD_URL}"
-curl -sSLO "${DOWNLOAD_URL}"
-dpkg -i "${DEB_PACKAGE}"
-rm -f "${DEB_PACKAGE}"
