@@ -7,7 +7,7 @@ Installs Hetzner Cloud CLI (hcloud).
 
 ```json
 "features": {
-    "ghcr.io/skriptfabrik/devcontainer-features/hcloud-cli:1": {}
+    "ghcr.io/valiukasd/devcontainer-features/hcloud-cli:1": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Installs Hetzner Cloud CLI (hcloud).
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/skriptfabrik/devcontainer-features/blob/main/src/hcloud-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/valiukasd/devcontainer-features/blob/main/src/hcloud-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
