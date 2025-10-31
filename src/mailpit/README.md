@@ -7,7 +7,7 @@ Installs Mailpit binary.
 
 ```json
 "features": {
-    "ghcr.io/skriptfabrik/devcontainer-features/mailpit:1": {}
+    "ghcr.io/valiukasd/devcontainer-features/mailpit:1": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Installs Mailpit binary.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/skriptfabrik/devcontainer-features/blob/main/src/mailpit/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/valiukasd/devcontainer-features/blob/main/src/mailpit/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._

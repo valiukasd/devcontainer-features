@@ -7,7 +7,7 @@ Installs terraform-backend-git binary.
 
 ```json
 "features": {
-    "ghcr.io/skriptfabrik/devcontainer-features/terraform-backend-git:1": {}
+    "ghcr.io/valiukasd/devcontainer-features/terraform-backend-git:1": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Installs terraform-backend-git binary.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/skriptfabrik/devcontainer-features/blob/main/src/terraform-backend-git/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/valiukasd/devcontainer-features/blob/main/src/terraform-backend-git/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
